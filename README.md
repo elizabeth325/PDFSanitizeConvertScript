@@ -99,11 +99,11 @@ All sanitized files will be saved to the output directory (`OUTPUT_DIR`, default
 
 ```mermaid 
 flowchart TD
-    A[Input PDF\(s\)]-->B["qpdf --linearize\: Removes JavaScript and embedded code"];
-    B-->C["pdfdetach -saveall\: Removes attachments and embedded files"];
-    C --> D["exiftool -all=\: Removes all metadata"];
-    D --> E["Ghostscript\: Removes hidden content, further sanitizes, preserves layout and images"];
-    E --> F[Output PDF\(s\)];
+    A[Input PDFs] --> B[qpdf --linearize]
+    B --> C[pdfdetach -saveall]
+    C --> D[exiftool -all=]
+    D --> E[Ghostscript sanitize]
+    E --> F[Output PDFs]
 ```
 
 ## Tool Explanations & Context
