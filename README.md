@@ -108,10 +108,15 @@ flowchart TD
 
 ### Flowchart Notes
 A: [Input PDF(s)]
+
 B: ["qpdf --linearize: Removes JavaScript and embedded code"]
+
 C: ["pdfdetach -saveall: Removes attachments and embedded files"]
+
 D: ["exiftool -all=: Removes all metadata"]
+
 E: ["Ghostscript: Removes hidden content, further sanitizes, preserves layout and images"]
+
 F: [Output PDF(s)]
 
 ## Tool Explanations & Context
