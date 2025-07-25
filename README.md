@@ -97,7 +97,7 @@ All sanitized files will be saved to the output directory (`OUTPUT_DIR`, default
 
 ## Workflow Diagram
 
-```mermaid
+```mermaid 
 flowchart TD
     A[Input PDF(s)] --> B[qpdf --linearize --sanitize]\nRemoves: JavaScript, embedded code
     B --> C[pdfdetach -saveall]\nRemoves: Attachments/embedded files
